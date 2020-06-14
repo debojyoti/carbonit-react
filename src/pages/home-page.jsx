@@ -1,13 +1,21 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
+import ForceCredentials from '../containers/force-credentails/force-credentails';
 
-class HomePage extends Component {
-    state = {  }
-    render() { 
-        return (  
-            <React.Fragment>
-                Home Page
-            </React.Fragment>
-        );
+/**
+ * The main page of the application which handles internal route logics
+ */
+const HomePage = props => {
+    const [ currentView, updateCurrentView ] = useState({
+        modeName: "forceCredentials"
+    })
+
+    switch(currentView.modeName) {
+        case "forceCredentials": {
+            return <ForceCredentials />;
+        }
+        default: {
+            return <div />;
+        }
     }
 }
  

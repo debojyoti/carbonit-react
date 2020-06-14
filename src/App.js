@@ -18,8 +18,7 @@ function App() {
             <FullPageLoader></FullPageLoader>
             <ToastsContainer store={ToastsStore} position={ToastsContainerPosition.BOTTOM_RIGHT} />
             <Switch>
-              <Route exact path="/login" component={LoginPage} />
-              <ProtectedRoute exact path="*" component={HomePage} redirectRoute="/login" /> */}
+              <Route path="*" component={HomePage} />
             </Switch>
           </div>
         </Router>
